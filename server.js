@@ -19,6 +19,15 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static(__dirname + "/client/public"));
 }
 
+// enable CORS, use:
+// https://enable-cors.org/server_expressjs.html
+// ...there also CORS modules to do this.
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', '*')
+//   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
+//   next();
+// });
+
 // Routing
 var articlesController = require("./client/controllers/article-controller");
 var router = new express.Router();
@@ -30,7 +39,7 @@ router.post("/api/saved", articlesController.insert);
 // delete saved articles
 router.delete("/api/saved/:id", articlesController.delete);
 // Send every other request to the React app
-router.get("*", function(req, res) {
+router.get("/*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 

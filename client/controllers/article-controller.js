@@ -1,15 +1,15 @@
 var Article = require("../models/Article");
 
 module.exports = {
-  // this method handles finding articles in the db
+  // this method handles finding all articles in the db
   find: function(req, res) {
-    Article.find(req.query).then(function(doc) {
+    Article.find().then(function(doc) {
       res.json(doc);
     }).catch(function(err) {
       res.json(err);
     });
   },
-  // this method handles creating new articles
+  // this method handles adding new articles to the db
   insert: function(req, res) {
     Article.create(req.body).then(function(doc) {
       res.json(doc);

@@ -22,11 +22,11 @@ if (process.env.NODE_ENV === "production") {
 // enable CORS, use:
 // https://enable-cors.org/server_expressjs.html
 // ...there also CORS modules to do this.
-// app.use((req, res, next) => {
-//   res.header('Access-Control-Allow-Origin', '*')
-//   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
-//   next();
-// });
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
+  next();
+});
 
 // Routing
 var articlesController = require("./client/controllers/article-controller");
@@ -42,6 +42,8 @@ router.delete("/api/saved/:id", articlesController.delete);
 router.get("/*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
+
+app.use(router);
 
 // Connect mongoose to our database
 const db = process.env.MONGODB_URI || "mongodb://localhost/nyt-react";

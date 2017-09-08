@@ -101,24 +101,6 @@ class Main extends Component {
       .then(this.getSavedArticles());
   }
 
-//============================Aaron's Functions=================================
-  // handleSave = id => {
-  //   const {article_id, title, url, date} = this.state.results.find(el => el.article_id === id)
-  //   socket.emit('refresh', 'Someone saved an article')
-  //   API.save(article_id, title, url, date)
-  //   .then(res => this.getSaved())
-  //   .catch(err => this.setState({ error: err.message }));
-  // }
-  //
-  // removeSaved = id => {
-  //   socket.emit('refresh', 'Someone deleted a saved article')
-  //   API.deleteSaved(id)
-  //   .then(res => this.getSaved())
-  //   .catch(err => this.setState({ error: err.message }));
-  // }
-//==============================================================================
-
-
   render() {
     return (
       <div>

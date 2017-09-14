@@ -103,18 +103,52 @@ class Main extends Component {
 
   render() {
     return (
-      <div>
-        <h1>New York Times Article Search</h1><hr/>
-        <Search
-          handleTopicChange={this.handleTopicChange}
-          handleStartYearChange={this.handleStartYearChange}
-          handleEndYearChange={this.handleEndYearChange}
-          handleFormSubmit={this.handleFormSubmit}
-          renderArticles={this.renderArticles}
-        />
-        <h2>Saved Articles</h2>
-        {this.renderSaved()}
+
+      <div className="main-container">
+        <div className="container">
+          {/* Jumbotron */}
+          <div className="jumbotron">
+            <h1 className="text-center"><strong>New York Times Article Search</strong></h1>
+            <h2 className="text-center">Search for and save articles of interest.</h2>
+          </div>
+          {/* Search Form and Results Section */}
+          <Search
+            handleTopicChange={this.handleTopicChange}
+            handleStartYearChange={this.handleStartYearChange}
+            handleEndYearChange={this.handleEndYearChange}
+            handleFormSubmit={this.handleFormSubmit}
+            renderArticles={this.renderArticles}
+          />
+          {/* Saved Articles Section */}
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="panel panel-primary">
+                  <div className="panel-heading">
+                    <h3 className="panel-title">
+                      <strong>
+                        <i className="fa fa-download" aria-hidden="true"></i> Saved Articles</strong>
+                    </h3>
+                  </div>
+                  <div className="panel-body">
+                    <ul className="list-group">
+                      {this.renderSaved()}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer>
+            <hr />
+            <p className="pull-right">
+              <i className="fa fa-github" aria-hidden="true"></i>
+              Proudly built using React.js
+            </p>
+          </footer>
+        </div>
       </div>
+
     );
   }
 

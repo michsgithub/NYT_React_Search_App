@@ -21,7 +21,6 @@ if (process.env.NODE_ENV === "production") {
 
 // enable CORS, use:
 // https://enable-cors.org/server_expressjs.html
-// ...there also CORS modules to do this.
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*')
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')

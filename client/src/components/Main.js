@@ -14,7 +14,7 @@ class Main extends Component {
     saved: []
   };
 
-  // When the component mounts, get a list of all saved articles and update this.state.articles
+  // When the component mounts, get a list of all saved articles and update this.state.saved
   componentDidMount() {
     this.getSavedArticles()
   }

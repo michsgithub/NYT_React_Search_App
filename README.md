@@ -11,13 +11,13 @@ These instructions will get you a copy of the project up and running on your loc
 1. Install dependencies
 2. In your CLI, enter **mongod**
 3. In a new CLI window, go to root of directory and enter **node server.js**
-4. In a third CLI window, go to root and enter **npm run start**. This will start the webpack dev server.
+4. In a third CLI window, go to root and enter **yarn start**. This will start the webpack dev server.
 
 Your browser should automatically open a new tab containing the app.
 
 ### Dependencies
 
-You will need to npm install the following node modules:
+You will need to yarn install the following node modules:
 
 1. express
 2. mongoose
@@ -29,13 +29,13 @@ You will need to npm install the following node modules:
 8. react-router-dom
 9. react-scripts
 
-Since I have included two package.json files, you do not need to install dependencies by name. Simply run the following in the root of your directory as well as in the Client folder:
+Since I have included two package.json files, you do not need to install dependencies by name. Simply run the following in the root of your directory *as well as* in the Client folder:
 
 ```
-npm install
+yarn install
 ```
 
-<!-- ## Deployment
+## Deployment
 
 Follow these instructions to deploy your app live on Heroku
 
@@ -49,21 +49,20 @@ Provision mLab MongoDB add-on for your project
 heroku addons:create mongolab
 ```
 
-
+Deploy the app
+```
+yarn deploy
+```
 
 Now your project should be successfully deployed on heroku.
 
 ## Screenshots
 
-**Article search home screen**
+**Article search and results**
 
-![screenshot-1](https://i.imgur.com/VhR7fas.png)
-
-**Article comments modal**
-
-![screenshot-2](https://i.imgur.com/uHUyrhi.png)
+![screenshot-1](https://i.imgur.com/eiN3oU2.png)
 
 ## Future Updates
 
-1. [ ] Make 'remove' button successfully remove articles from the saved articles page
-2. [ ] Polish comment section UI -->
+1. [ ] Polish styling of search results/saved articles
+2. [ ] Add ability to comment on articles

@@ -7,7 +7,7 @@ const path = require("path");
 
 // Set up a default port, configure mongoose, configure our middleware
 const PORT = process.env.PORT || 3001;
-mongoose.Promise = bluebird;
+mongoose.Promise = bluebird; //bluebird is promise library... 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

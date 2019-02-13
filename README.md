@@ -1,23 +1,14 @@
-# New York Times Article Search
+Features:
 
-This is a React.js app that allows users to search for New York Times articles. After performing a search, the user will see article results including the name of the article, the date and time of publishing, and a button linking to the article source. Finally, users are able to add and remove articles from a saved articles section. The app uses Node/Express for the server and routing, MongoDB/Mongoose for the database and models, Handlebars for the layout and views, & Cheerio/Request for scraping the data from www.npr.org
+** User searches NYT articles by entering criteria of topic, start year and end year
 
-[Live Demo](https://new-york-times-react-app.herokuapp.com/)
+** User views the full article by clicking on the View Article button, that brings user to the NYT site
 
-## Getting Started
+** User saves article of interest by clicking the Save button, which saves article to db and displays it on the Saved Articles section
 
-These instructions will get you a copy of the project up and running on your local machine for development. I will assume that you already have [Node.js](https://nodejs.org/en/) and [MongoDB](https://www.mongodb.com/) installed locally. See deployment for notes on how to deploy the project on a live system.
-
-1. Install dependencies
-2. In your CLI, enter **mongod**
-3. In a new CLI window, go to root of directory and enter **node server.js**
-4. In a third CLI window, go to root and enter **yarn start**. This will start the webpack dev server.
-
-Your browser should automatically open a new tab containing the app.
+** User deletes saved article by clicking the Delete button, which removes article from db and display
 
 ### Dependencies
-
-You will need to yarn install the following node modules:
 
 1. express
 2. mongoose
@@ -29,40 +20,18 @@ You will need to yarn install the following node modules:
 8. react-router-dom
 9. react-scripts
 
-Since I have included two package.json files, you do not need to install dependencies by name. Simply run the following in the root of your directory *as well as* in the Client folder:
+### model
+1. article
 
-```
-yarn install
-```
+### View
+1. index.html
+2. index.js
+3. index.js
+# components
+1. main
+2. search
+3. saved
+4. results
 
-## Deployment
-
-Follow these instructions to deploy your app live on Heroku
-
-Create a heroku app in your project directory
-```
-heroku create <projectName>
-```
-
-Provision mLab MongoDB add-on for your project
-```
-heroku addons:create mongolab
-```
-
-Deploy the app
-```
-yarn deploy
-```
-
-Now your project should be successfully deployed on heroku.
-
-## Screenshots
-
-**Article search and results**
-
-![screenshot-1](https://i.imgur.com/eiN3oU2.png)
-
-## Future Updates
-
-1. [ ] Polish styling of search results/saved articles
-2. [ ] Add ability to comment on articles
+### Controllers
+article-controller

@@ -108,8 +108,8 @@ class Main extends Component {
         <div className="container">
           {/* Jumbotron */}
           <div className="jumbotron">
-            <h1 className="text-center"><strong>New York Times Article Search</strong></h1>
-            <h2 className="text-center">Search for and save articles of interest.</h2>
+            <h1 className="text-center"><strong>New York Times Article Scrubber</strong></h1>
+            <h2 className="text-center">Search for and annotate article of interest!</h2>
           </div>
           {/* Search Form and Results Section */}
           <Search
@@ -127,7 +127,7 @@ class Main extends Component {
                   <div className="panel-heading">
                     <h3 className="panel-title">
                       <strong>
-                        <i className="fa fa-download" aria-hidden="true"></i> Saved Articles</strong>
+                        <i className="" aria-hidden="true"></i> Saved Articles</strong>
                     </h3>
                   </div>
                   <div className="panel-body">
@@ -142,8 +142,8 @@ class Main extends Component {
           <footer>
             <hr />
             <p className="pull-right">
-              <i className="fa fa-github" aria-hidden="true"></i>
-              Proudly built using React.js
+              <i className="" aria-hidden="true"></i>
+              powered by: react
             </p>
           </footer>
         </div>
